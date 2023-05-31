@@ -1,52 +1,143 @@
-# Prerequisites
-*.d
+# Arquivos gerados pelo Visual Studio
+.vs/
+bin/
+obj/
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
+# Arquivos de compilação do MSBuild
 *.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
 *.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
 *.pdb
+*.userprefs
+*.appx
+*.appxbundle
+*.vsix
+*.vsixmanifest
+*.xap
+*.xcappdata
+*.xcarchive
+*.ipa
+*.apk
+*.app
+*.ipa.zip
+*.apk.zip
+*.targets
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# Arquivos de publicação
+_PublishedWebsites/
+PublishProfiles/
+*.pubxml
+
+# Arquivos de dependência gerados pelo NuGet
+packages/
+*.nupkg
+*.paket.*
+*.bak
+*.nupkg.sha512
+*.lock
+.project.gated-checkin.yml
+.nuget.props
+.nuget.targets
+.paket/paket.exe
+.paket/paket.bootstrapper.exe
+paket-files/
+
+# Arquivos de cache e logs do Visual Studio
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates.cache
+*.log
+*.vsconfig
+*.vsp
+
+# Ferramentas de análise de código estático
+*.ruleset
+*.rulesets
+*.codeanalysis
+*.vsct
+
+# Arquivos temporários
+[Tt]emp/
+[Oo]bj/
+*.cache
+*.swp
+*.tmp
+
+# Arquivos do Rider
+.idea/
+*.sln.iml
+
+# Arquivos de análise de cobertura
+*.coverage
+*.coverage.*.xml
+*.dotcover
+
+# Arquivos do Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Arquivos de teste
+TestResults/
+[Tt]est[Rr]esult*/
+*.trx
+*.testsettings
+*.runsettings
+*.loadtest
+*.orderedtest
+_out/
+
+# Arquivos de configuração do local de publicação
+publish/
+
+# Arquivos de configuração do local de depuração
+Debug/
+
+# Arquivos de cache do NuGet
+*.dat
+*.xml
+*.cs.rsp
+
+# Logs de análise
+*.lastbuildstate
+*.swclog
+*.svclog
+*.log.xml
+*.log.*.xml
+
+# Logs do Git
+*.git-credentials
+*.gitconfig
+*.gitignore
+
+# Outros arquivos gerados pelo Visual Studio
+ClientBin/
+[Ss]tyle[Cc]op.*
+*.[Cc]ache
+nuget.exe
+nuget.targets
+msbuild.log
+msbuild.binlog
+msbuild.err
+msbuild.out
+msbuild.wrn
+msbuild.log.*
+
+# Arquivos de projeto do Visual Studio
+*.csproj.user
+*.resharper
+*.sln.docstates
+
+# Arquivos de configuração de ferramentas de teste
+TestResults/
+.vsmdi
+*.testsettings
+*.vspx
+*.orderedtest
+*.loadtest
+*.mtp
+
+# Arquivos temporários do Rider
+Rider/
+.idea/
+*.sln.iml
