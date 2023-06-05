@@ -1,4 +1,5 @@
-﻿using EstoqueApp.Application.Interfaces.Services;
+﻿using EstoqueApp.Application.Interfaces.Persistences;
+using EstoqueApp.Application.Interfaces.Services;
 using EstoqueApp.Application.Models.Commands;
 using EstoqueApp.Application.Models.Commands.Produtos;
 using EstoqueApp.Application.Models.Queries;
@@ -14,10 +15,12 @@ namespace EstoqueApp.Application.Services
     public class ProdutoAppService : IProdutoAppService
     {
         private readonly IMediator? _mediator;
+        private readonly IProdutoPersistence? _produtoPersistence;
 
-        public ProdutoAppService(IMediator? mediator)
+        public ProdutoAppService(IMediator? mediator, IProdutoPersistence? produtoPersistence)
         {
             _mediator = mediator;
+            _produtoPersistence = produtoPersistence;
         }
 
         public async Task<ProdutoQuery> Create(ProdutoCreateCommand command)
@@ -37,13 +40,15 @@ namespace EstoqueApp.Application.Services
 
         public List<ProdutoQuery> GetAll()
         {
-            throw new NotImplementedException();
+            return _produtoPersistence.GetAll();
         }
 
         public ProdutoQuery GetById(Guid? id)
         {
-            throw new NotImplementedException();
+            return _produtoPersistence.GetById(id.Value);
         }
     }
 }
+
+
 
