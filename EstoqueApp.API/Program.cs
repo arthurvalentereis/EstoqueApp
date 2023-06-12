@@ -11,12 +11,15 @@ builder.Services.AddCorsPolicy();
 builder.Services.AddEntityFramework(builder.Configuration);
 builder.Services.AddServices(builder.Configuration);
 builder.Services.AddAutoMapperProfiles();
+builder.Services.AddAutoMapperProfiles();
 builder.Services.AddMediatR(); // MediatR tem que ficar após service senão ele não consegue ser construído
+builder.Services.AddJwtBearer(builder.Configuration);
 
 var app = builder.Build();
 
 app.UseSwaggerDoc();
 app.UseCorsPolicy();
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 

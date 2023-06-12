@@ -125,6 +125,3 @@ namespace EstoqueApp.Tests
         }
     }
 }
-
-
-
