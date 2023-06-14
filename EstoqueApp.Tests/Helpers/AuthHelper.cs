@@ -10,6 +10,8 @@ namespace EstoqueApp.Tests.Helpers
     {
         public async Task<string> ObterTokenAcesso()
         {
+            var resource = "https://usuariosapp1.azurewebsites.net/api/usuarios/autenticar";
+
             var request = new AuthRequest
             {
                 Email = "usuarioteste@gmail.com",
@@ -17,7 +19,7 @@ namespace EstoqueApp.Tests.Helpers
             };
 
             var content = TestHelper.CreateContent(request);
-            var result = await new HttpClient().PostAsync(".../api/autenticar", content);
+            var result = await new HttpClient().PostAsync(resource, content);
             var response = TestHelper.ReadResponse<AuthResponse>(result);
             return response.AccessToken;
         }
@@ -34,3 +36,6 @@ namespace EstoqueApp.Tests.Helpers
         public string? AccessToken { get; set; }
     }
 }
+
+
+
